@@ -25,15 +25,15 @@ public class Counter {
     }
     public void printTop5() {
         for (int i = 0; i < frequencies.size(); i++) {
-            for (int j = i+1; j < frequencies.size(); j++) {
-                if (frequencies.get(i) > frequencies.get(j)) {
-                    int temp = frequencies.get(i);
-                    frequencies.set(i, frequencies.get(j));
-                    frequencies.set(j, temp);
+            for (int j = 0; j < frequencies.size()-1; j++) {
+                if (frequencies.get(j) > frequencies.get(j+1)) {
+                    int temp = frequencies.get(j);
+                    frequencies.set(j, frequencies.get(j+1));
+                    frequencies.set(j+1, temp);
 
-                    String temp2 = cleanCopy.get(i);
-                    cleanCopy.set(i, cleanCopy.get(j));
-                    cleanCopy.set(j, temp2);
+                    String temp2 = cleanCopy.get(j);
+                    cleanCopy.set(j, cleanCopy.get(j+1));
+                    cleanCopy.set(j+1, temp2);
                 }
             }
         }

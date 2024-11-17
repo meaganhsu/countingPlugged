@@ -6,7 +6,7 @@ public class Main {
         ArrayList<String> commonWords = new ArrayList<>();
         ArrayList<String> cleanWords = new ArrayList<>();
 
-        Scanner scan = new Scanner(new File("AnimalFarm.txt"));
+        Scanner scan = new Scanner(new File("1984.txt"));
         Scanner scanCW = new Scanner(new File("commonWords.txt"));
 
         // populating commonWords arraylist
